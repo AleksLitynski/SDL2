@@ -217,6 +217,10 @@ else
   error('Unsupported platform.')
 endif
 
+if get_option('enable_vulkan_video') == true
+  cdata.set('SDL_VIDEO_VULKAN', 1)
+endif
+
 core_inc = [include_directories('include')]
 all_sources = []
 main_sources = []
@@ -267,6 +271,15 @@ sdl2 = library('sdl2',
   link_args : core_ldflags,
   dependencies : core_deps,
 )
+
+sdl2static = static_library('sdl2',
+  all_sources,
+  include_directories : core_inc,
+  c_args : core_args,
+  link_args : core_ldflags,
+  dependencies : core_deps,
+)
+
 
 sdl2main = static_library('sdl2main',
   main_sources,

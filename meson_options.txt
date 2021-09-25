@@ -1,0 +1,1 @@
+option('enable_vulkan_video', type : 'boolean', value : true, description : 'true to enable vulkan support, false to disable. Defaults to true.')

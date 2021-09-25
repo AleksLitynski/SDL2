@@ -313,6 +313,9 @@
 #mesondefine SDL_VIDEO_OPENGL_OSMESA
 #mesondefine SDL_VIDEO_OPENGL_OSMESA_DYNAMIC
 
+/* Enable Vulkan support */
+#mesondefine SDL_VIDEO_VULKAN
+
 /* Enable system power support */
 #mesondefine SDL_POWER_LINUX
 #mesondefine SDL_POWER_WINDOWS

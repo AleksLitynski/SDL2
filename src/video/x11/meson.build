@@ -16,4 +16,5 @@ all_sources += files(
   'SDL_x11xinput2.c',
   'SDL_x11opengl.c',
   'SDL_x11opengles.c',
+  'SDL_x11vulkan.c'
 )
